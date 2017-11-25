@@ -25,6 +25,6 @@ function makeUpperText({ getState }) {
     }
 }
 
-const store = createStore(rootReducer, applyMiddleware(textAlert, makeUpperText, thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
