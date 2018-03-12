@@ -13,7 +13,6 @@ const initialState = {
 export default function todoReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_TODO: {
-            console.log('reducers action :', state);
             return {
                 ...state,
                 todoList: [...state.todoList, action.text] ,
@@ -23,7 +22,6 @@ export default function todoReducer(state = initialState, action) {
             return {
                 ...state,
                 todoList: map(state.todoList, function (v, i) {
-                    console.log(action);
                     return i === action.id ? action.text : v;
                 })
             }

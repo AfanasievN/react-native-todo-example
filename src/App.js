@@ -42,7 +42,6 @@ class App extends Component {
 
     render() {
         const { todoList } = this.props.todo;
-        console.log('APP state:', this);
         return (
             <View style={styles.container}>
               <Text style={styles.welcome}>
@@ -76,11 +75,11 @@ class App extends Component {
                                     <Text style={{fontSize: 30, paddingBottom: 5, paddingTop: 5, paddingRight: 10, paddingLeft: 10}}>
                                         {entry}
                                     </Text>
-                                    <Button
-                                        title='X'
-                                        onPress={() => this.removeTodo(id)}
-                                        style={styles.redButton}
-                                    />
+                                    {/*<Button*/}
+                                        {/*title='X'*/}
+                                        {/*onPress={() => this.removeTodo(id)}*/}
+                                        {/*style={styles.redButton}*/}
+                                    {/*/>*/}
                                 </View>
                             </View>
                         )
